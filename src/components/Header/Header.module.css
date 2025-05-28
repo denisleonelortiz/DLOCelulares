@@ -1,0 +1,15 @@
+.title {
+    color: white;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    font-family: cursive;
+    margin-top: 0;
+    z-index: 1;
+    font-size: 40px;
+}

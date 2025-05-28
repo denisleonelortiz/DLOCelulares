@@ -1,0 +1,30 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer {
+    height: 35rem;
+}
+
+.description {
+    width: 40rem;
+}
+
+.back {
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.back:hover {
+    color: #49d3fd;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: end;
+    padding-right: 10rem;
+}

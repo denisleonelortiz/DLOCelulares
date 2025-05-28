@@ -1,0 +1,26 @@
+.headerContainer {
+    background-color: black;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 10rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+
+}
+
+.miCarrito {
+  all: unset;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.miCarrito:hover {
+  color: #49d3fd;
+}
+

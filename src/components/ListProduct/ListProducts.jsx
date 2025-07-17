@@ -10,7 +10,7 @@ export default function ListProducts() {
 
     const productsFiltered = products.filter((product) => product.title.toLowerCase().includes(productToSearch.toLowerCase()))
 
-    const cantidadDeProductosPorPagina = 10;
+    const cantidadDeProductosPorPagina = 8;
     const cantidadDePaginas = Math.ceil(productsFiltered.length / 10)
     const ultimoProducto = paginaActual * cantidadDeProductosPorPagina
     const primerProducto = ultimoProducto - cantidadDeProductosPorPagina

@@ -19,29 +19,11 @@ export default function NavBar() {
         , 0)
 
     return (
-        // <nav className={styles.navBarContainer}>
-        //     <div className={styles.divNamePage}>
-        //         <Link className={styles.namePage}>DLO Celulares</Link>
-        //     </div>
-        //     <div className={styles.divInputSearch}>
-        //         <input
-        //             type="search"
-        //             onChange={(e)=>setProductToSearch(e.target.value)}
-        //             className={styles.inputSearch}
-        //             placeholder="Buscar..." />
-        //     </div>
-        //     <div className={styles.menuNav}>
-        //         <Link to="/" className={styles.linkNav}>Inicio</Link>
-        //         <Link to="/contact" className={styles.linkNav}>Contacto</Link>
-        //         <Link to="/about" className={styles.linkNav}>Nosotros</Link>
-        //         <button onClick={() => setActive(!active)} className={styles.miCarrito}> <FaShoppingCart /> {totalProducts}</button>
-        //         <Link to="/login" className={styles.linkNav}>Iniciar Sesión</Link>
-        //     </div>
-        // </nav>
+        <>
+        <div className="w-100">
 
-        <nav className="navbar navbar-expand-lg bg-body-tertiary py-0 sticky-top">
-            <div className="container-fluid mt-0 bg-black  py-2">
-                {/* <a class="navbar-brand" href="#">Dlo Celulares</a> */}
+        <nav className="navbar navbar-expand-lg bg-black sticky-top">
+            <div className="container">
                 <Link to={"/"} className={`navbar-brand ${styles.namePage}`}>DLO Celulares</Link>
 
                 {/* boton carrito y hamburguesa para pantallas chicas */}
@@ -72,20 +54,7 @@ export default function NavBar() {
                         <li className="nav-item">
                             <Link to="/contact" className={`nav-link ${styles.linkNav}`}>Contacto</Link>
                         </li>
-                        {/* <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li> */}
-                        {/* <li className="nav-item">
-                            <Link to="/about" className={`nav-link ${styles.linkNav}`}>Nosotros</Link>
-                        </li> */}
+
                         <li className="nav-item">
                             <button onClick={() => setActive(!active)} className={`nav-link d-none d-lg-block ${styles.miCarrito}`}> <FaShoppingCart /> {totalProducts}</button>
                         </li>
@@ -97,42 +66,7 @@ export default function NavBar() {
                 </div>
             </div>
         </nav>
-
-        // <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        //     <div class="container-fluid">
-        //         <a class="navbar-brand" href="#">Navbar</a>
-        //         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        //             <span class="navbar-toggler-icon"></span>
-        //         </button>
-        //         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        //             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        //                 <li class="nav-item">
-        //                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-        //                 </li>
-        //                 <li class="nav-item">
-        //                     <a class="nav-link" href="#">Link</a>
-        //                 </li>
-        //                 <li class="nav-item dropdown">
-        //                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        //                         Dropdown
-        //                     </a>
-        //                     <ul class="dropdown-menu">
-        //                         <li><a class="dropdown-item" href="#">Action</a></li>
-        //                         <li><a class="dropdown-item" href="#">Another action</a></li>
-        //                         <li><hr class="dropdown-divider" /></li>
-        //                         <li><a class="dropdown-item" href="#">Something else here</a></li>
-        //                     </ul>
-        //                 </li>
-        //                 <li class="nav-item">
-        //                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        //                 </li>
-        //             </ul>
-        //             <form class="d-flex" role="search">
-        //                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        //                 <button class="btn btn-outline-success" type="submit">Search</button>
-        //             </form>
-        //         </div>
-        //     </div>
-        // </nav>
+        </div>
+        </>
     )
 }

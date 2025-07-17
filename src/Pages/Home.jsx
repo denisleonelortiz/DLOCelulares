@@ -1,12 +1,19 @@
 import Loading from "../components/Loading/Loading"
 import ListProducts from "../components/ListProduct/ListProducts"
+import { useContext } from "react"
+import { ProductContext } from "../context/ProductContext"
+import Pagination from "../components/Pagination/Pagination"
 
-export default function Home({ loading, products, handlerAddButton, handlerIncrease, handlerDecrease, carrito }) {
+export default function Home() {
+
+    const { loading } = useContext(ProductContext)
+
     return (
         <>
             {loading ?
                 <Loading />
-                : <ListProducts products={products} handlerAddButton={handlerAddButton} handlerIncrease={handlerIncrease} handlerDecrease={handlerDecrease} carrito={carrito} />
+                : <ListProducts />
+
             }
         </>
     )

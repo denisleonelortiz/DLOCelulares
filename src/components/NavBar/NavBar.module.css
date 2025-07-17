@@ -1,26 +1,92 @@
-.headerContainer {
-    background-color: black;
+.navBarContainer {
+    background-color: rgb(129, 4, 4) !important;
     height: 4rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding-right: 10rem;
-    position: fixed;
-    top: 0;
-    right: 0;
+    /* position: fixed; */
+    /* top: 0;
+    right: 0; */
     width: 100%;
+}
 
+.heightNav {
+  height: 4rem;
+}
+
+.divNamePage {
+  width: 30%;
+}
+
+.namePage {
+  font-family: cursive;
+  text-decoration-line: none;
+  color: white !important;
+  font-size: 2rem ;
+  font-weight: bold;
+}
+
+.namePage:hover {
+  color: #49d3fd !important;
+  transition: all 0.3s ease;
+}
+
+.divInputSearch {
+  width: 40%;
+}
+
+.inputSearch {
+  width: 50%;
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
+  color: black;
+}
+
+.menuNav {
+  width: 30%;
+  display: flex;
+  gap: 1rem;
+}
+
+.linkNav {
+  color: white !important;
+  font-weight: bold !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.linkNav:hover,
+.linkNav:focus {
+  color: #49d3fd !important;
 }
 
 .miCarrito {
   all: unset;
-  color: white;
+  color: white !important;
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.miCarrito:hover {
-  color: #49d3fd;
+.miCarrito:hover,
+.miCarrito:focus {
+  color: #49d3fd !important;
+}
+
+.miCarrito2{
+  font-size: 1.25rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.miCarrito2:hover{
+  border-color: transparent;
+}
+.miCarrito2:focus {
+  color: #49d3fd !important;
+  border-color: transparent;
 }
 

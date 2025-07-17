@@ -12,6 +12,10 @@
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
+.titleCarrito {
+    padding: 2rem 0;
+}
+
 .cartContainer::-webkit-scrollbar {
     display: none;
 }

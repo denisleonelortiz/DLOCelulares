@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import styles from "./Cart.module.css"
 import { FaTrash } from "react-icons/fa"
+import { CartContext } from "../../context/CartContext";
 
-export default function Cart({ products, active, HandlerVaciarCarrito, handlerTrashButton }) {
+export default function Cart() {
 
-    const totalPrice = products.reduce((acc, item) => {
+    const { carrito, active, HandlerVaciarCarrito, handlerTrashButton } = useContext(CartContext)
+
+    const totalPrice = carrito.reduce((acc, item) => {
         return acc + (Math.ceil(item.price) * item.quantity);
     }, 0);
 
@@ -12,11 +15,11 @@ export default function Cart({ products, active, HandlerVaciarCarrito, handlerTr
         <>
             {active ?
                 <div className={styles.cartContainer}>
-                    <h4>Carrito</h4>
-                    {products.length ?
+                    <h4 className={styles.titleCarrito}>Carrito</h4>
+                    {carrito.length ?
                         <>
                             <ul>
-                                {products.map((product, index) => (
+                                {carrito.map((product, index) => (
                                     <li key={index} className={styles.liProduct}>
                                         <div className={styles.imgContainer}>
                                             <img src={product.images[0]} alt="" />
@@ -24,11 +27,11 @@ export default function Cart({ products, active, HandlerVaciarCarrito, handlerTr
                                         <div className={styles.infoProducts}>
                                             <span>{product.title}</span>
                                             <span>{product.quantity} x ${Math.ceil(product.price)}</span>
-                                            <span><strong>Subtotal: ${product.quantity*Math.ceil(product.price)}</strong></span>
+                                            <span><strong>Subtotal: ${product.quantity * Math.ceil(product.price)}</strong></span>
                                         </div>
                                         <div>
-                                            <button className={styles.trashButton} onClick={()=> handlerTrashButton(product.id)}>
-                                                <FaTrash/>
+                                            <button className={styles.trashButton} onClick={() => handlerTrashButton(product.id)}>
+                                                <FaTrash />
                                             </button>
                                         </div>
                                     </li>))

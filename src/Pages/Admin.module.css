@@ -1,0 +1,82 @@
+.card {
+    width: 10rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img {
+    width: 100%;
+}
+
+.listProducts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.productInformation {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    background-color: rgba(179, 179, 179, 0.452);
+    color: black;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    border:1px solid black
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+}
+
+.title {
+    font-family: cursive;
+    width: 50%;
+    display: flex;
+    padding-left: 8rem;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+}
+
+.containerbtnNav {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    gap: 2rem;
+    padding-right: 8rem;
+}
+
+
+.btnNav:hover {
+    border: 1px solid #49d3fd !important;
+}
+
+/* .btnNav {
+    background-color: rgb(54, 54, 54);
+} */

@@ -1,7 +1,9 @@
+
 .mainContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 2rem;
 }
 
 .imgContainer {
@@ -15,6 +17,8 @@
 .back {
     font-size: 18px;
     transition: all 0.3s ease;
+    background-color: black;
+    border-radius: 10px;
 }
 
 .back:hover {

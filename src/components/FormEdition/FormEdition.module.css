@@ -1,0 +1,99 @@
+.addForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: end;
+    color: White;
+    width: 30rem;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: black;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 0 0 3000px rgba(0, 0, 0, 0.6);
+    padding: 3rem 0;
+}
+
+.input {
+    background-color: aliceblue;
+    width: 90%;
+    height: 1.5rem;
+    border-radius: 5px;
+    color: black;
+    -moz-appearance: textfield;
+
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.itemForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.textarea {
+    resize: none;
+    width: 90%;
+    height: 8rem;
+    background-color: aliceblue;
+    border-radius: 5px;
+    color: black;
+}
+
+.nameInput {
+    display: flex;
+    justify-content: end;
+    width: 25%;
+    min-height: 4rem;
+}
+
+.inputContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 4rem;
+}
+
+.addBtn {
+    background-color: rgb(61, 61, 61);
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.addBtn:hover {
+    border: none;
+    color: #49d3fd;
+}
+
+.containerBtnClose {
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.closeBtn {
+    background-color: rgb(61, 61, 61);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+    border: none;
+    color: red;
+}

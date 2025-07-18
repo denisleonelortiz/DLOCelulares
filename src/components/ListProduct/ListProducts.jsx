@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import CardProduct from "../CardProduct/CardProduct"
 import styles from "./ListProduct.module.css"
 import { ProductContext } from "../../context/ProductContext"
@@ -6,7 +6,7 @@ import { ProductContext } from "../../context/ProductContext"
 export default function ListProducts() {
 
     const [paginaActual, setPaginaActual] = useState(1)
-    const { products, productToSearch } = useContext(ProductContext)
+    const { products, productToSearch, setProductToSearch } = useContext(ProductContext)
 
     const productsFiltered = products.filter((product) => product.title.toLowerCase().includes(productToSearch.toLowerCase()))
 
@@ -15,6 +15,7 @@ export default function ListProducts() {
     const ultimoProducto = paginaActual * cantidadDeProductosPorPagina
     const primerProducto = ultimoProducto - cantidadDeProductosPorPagina
     const productosParaMostrar = productsFiltered.slice(primerProducto, ultimoProducto)
+
 
     const paginaAnterior = () => {
         setPaginaActual(prev => prev > 1 ? prev - 1 : prev)

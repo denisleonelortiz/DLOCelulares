@@ -12,7 +12,7 @@ import { FaBars } from 'react-icons/fa';
 export default function NavBar() {
 
     const { carrito, active, setActive } = useContext(CartContext)
-    const { setProductToSearch } = useContext(ProductContext)
+    const { setProductToSearch, productToSearch } = useContext(ProductContext)
 
     const totalProducts = carrito.reduce((acc, item) =>
         acc + item.quantity
@@ -39,12 +39,12 @@ export default function NavBar() {
                 </div>
 
                 <form className="position-absolute start-50 translate-middle-x d-none d-lg-block " role="search">
-                    <input className="form-control" type="search" placeholder="Buscar" aria-label="Search" onChange={(e) => setProductToSearch(e.target.value)} />
+                    <input className="form-control" type="search" placeholder="Buscar" aria-label="Search" value={productToSearch} onChange={(e) => setProductToSearch(e.target.value)} />
                 </form>
 
                 <div className="collapse navbar-collapse bg-black" id="navbarSupportedContent">
                     <form className="d-flex d-lg-none" role="search">
-                        <input className="form-control" type="search" placeholder="Buscar" aria-label="Search" onChange={(e) => setProductToSearch(e.target.value)} />
+                        <input className="form-control" type="search" placeholder="Buscar" aria-label="Search" value={productToSearch} onChange={(e) => setProductToSearch(e.target.value)} />
                     </form>
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
                         <li className="nav-item">

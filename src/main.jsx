@@ -15,18 +15,18 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProductProvider>
-      <CartProvider>
-        <CardProductProvider>
-          <AuthProvider>
-            <AdminProvider>
-              <Router>
+    <Router>
+      <ProductProvider>
+        <CartProvider>
+          <CardProductProvider>
+            <AuthProvider>
+              <AdminProvider>
                 <App />
-              </Router>
-            </AdminProvider>
-          </AuthProvider>
-        </CardProductProvider>
-      </CartProvider>
-    </ProductProvider>
+              </AdminProvider>
+            </AuthProvider>
+          </CardProductProvider>
+        </CartProvider>
+      </ProductProvider>
+    </Router>
   </StrictMode>,
 )

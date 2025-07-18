@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 export const ProductContext = createContext()
@@ -8,6 +9,7 @@ export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const [productToSearch, setProductToSearch] = useState("")
+    const location = useLocation()
 
 
     useEffect(() => {
@@ -27,6 +29,10 @@ export const ProductProvider = ({ children }) => {
         }
         fetchApi()
     }, [])
+
+    useEffect(()=> {
+        setProductToSearch("")
+    },[location.pathname])
 
     const updateProducts = async () => {
         try {

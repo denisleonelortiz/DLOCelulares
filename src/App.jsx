@@ -48,6 +48,9 @@ function App() {
         toastOptions={{
           duration: 2500,
         }}
+        containerStyle={{
+          marginTop: '3rem', 
+        }}
       />
 
     </div>

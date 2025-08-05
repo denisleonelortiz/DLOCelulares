@@ -2,8 +2,9 @@
 .mainContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 2rem;
+    width: 100%;
 }
 
 .imgContainer {

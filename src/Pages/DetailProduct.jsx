@@ -4,6 +4,7 @@ import styles from "./DetailProduct.module.css"
 import { useContext } from "react"
 import { ProductContext } from "../context/ProductContext"
 import { CardProductContext } from "../context/CardProductContext"
+import ProductCarousel from "../components/ProductCarousel/ProductCarousel"
 
 
 export default function DetailProduct() {
@@ -15,14 +16,19 @@ export default function DetailProduct() {
     const navigate = useNavigate()
     const descuento = 0.10
     const precio = Math.ceil(productSelected.price)
+    console.log(productSelected);
+
 
     return (
         <>
             {productSelected ?
                 (
-                    <div className=" mb-5">
+                    <div className=" mb-5 w-100">
                         <div className={styles.mainContainer}>
-                            <img src={productSelected.images[2]} alt="" className={styles.imgContainer} />
+                            <div className=" w-50 d-flex flex-row-reverse">
+                                <ProductCarousel images={productSelected.images} />
+                            </div>
+                            {/* <img src={productSelected.images[2]} alt="" className={styles.imgContainer} /> */}
                             <div>
                                 <h1>{productSelected.title}</h1>
                                 <h5 className=" me-2">${precio}</h5>

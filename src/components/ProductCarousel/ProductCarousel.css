@@ -1,0 +1,36 @@
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 0px;
+}
+
+.mySwiper2 {
+  height: 400px;
+  width: 75%;
+}
+
+.mySwiper {
+  height: 400px;
+  width: auto;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.mySwiper .swiper-slide {
+  height: 25%;
+  opacity: 0.5;
+  border: 1px solid rgba(128, 128, 128, 0.384);
+}
+
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

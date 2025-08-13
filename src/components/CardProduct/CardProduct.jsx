@@ -35,7 +35,7 @@ export default function CardProduct({ product }) {
 
                     : <>
                         <button className={styles.btnRestSum} onClick={() => handlerDecrease(product)}>-</button>
-                        <span>{quantity} en tu carrito</span>
+                        <span className=" m-auto">{quantity} en tu carrito</span>
                         <button className={styles.btnRestSum} onClick={() => handlerIncrease(product)}>+</button>
                     </>
                 }

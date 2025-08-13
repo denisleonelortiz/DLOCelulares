@@ -44,25 +44,27 @@
 
 
 .btnRestSum {
-    padding-block: 5px;
     background-color: white;
     color: black;
     transition: all 0.3s ease;
+    border: 3px solid white;
+    margin-right: -1px;
 }
 
 .btnRestSum:hover {
     background-color: black;
     color: white;
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 
 .btnContainer {
-    border: 3px solid black;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
     height: 2.5rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     overflow: hidden;
 }

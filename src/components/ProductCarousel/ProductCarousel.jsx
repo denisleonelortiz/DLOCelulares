@@ -7,11 +7,12 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import "swiper/css/pagination";
 
 import "./ProductCarousel.css";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
 
 export default function ProductCarousel({ images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -19,13 +20,15 @@ export default function ProductCarousel({ images }) {
   return (
     <>
       <Swiper
+        modules={[Navigation, Thumbs, Pagination, Autoplay]}
         style={{
           '--swiper-navigation-color': 'gray',
-          '--swiper-pagination-color': '#fff',
+          '--swiper-pagination-color': '#000000ff',
         }}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000 }}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[Navigation, Thumbs]}
         className="mySwiper2"
       >
         {images.map(image => <SwiperSlide><img src={image} /></SwiperSlide>)}
@@ -38,11 +41,10 @@ export default function ProductCarousel({ images }) {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         direction="vertical"
-        className="mySwiper"
+        className="mySwiper bg-danger thumbs-swiper"
       >
         {images.map(image => <SwiperSlide><img src={image} /></SwiperSlide>)}
       </Swiper>
     </>
   );
 }
-

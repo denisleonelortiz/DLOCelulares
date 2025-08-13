@@ -81,7 +81,6 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  gap: 2rem;
   margin-bottom: 4rem;
   flex-direction: column;
 }
@@ -93,8 +92,8 @@
   align-items: center;
   height: 100px;
   width: 80%;
-  gap: 10px;
-  padding-bottom: 16px;
+  padding: 16px 0;
+  box-sizing: content-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 

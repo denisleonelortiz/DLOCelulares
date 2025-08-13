@@ -24,6 +24,7 @@ export default function ProductCarousel({ images }) {
         style={{
           '--swiper-navigation-color': 'gray',
           '--swiper-pagination-color': '#000000ff',
+          '--swiper-navigation-sides-offset': '0px',
         }}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}

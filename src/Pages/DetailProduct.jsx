@@ -24,6 +24,10 @@ export default function DetailProduct() {
         setQuantity(newQuantity)
     }, [carrito])
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             {productSelected ?

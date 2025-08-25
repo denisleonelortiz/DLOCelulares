@@ -60,7 +60,7 @@ export default function NavBar() {
                                     <button onClick={() => setActive(!active)} className={`nav-link d-none d-lg-block ${styles.miCarrito}`}> <FaShoppingCart /> {totalProducts}</button>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/login" className={`nav-link ${styles.linkNav}`}>Iniciar sesion</Link>
+                                    <Link to="/login" className={`nav-link ${styles.linkNav}`}>Iniciar Sesión</Link>
                                 </li>
                             </ul>
 

@@ -33,12 +33,12 @@ export default function DetailProduct() {
             {productSelected ?
                 (
                     <div className=" mb-5 w-100">
-                        <div className={` flex-column ${styles.mainContainer}`}>
-                            <div className=" w-100 flex-column flex-md-row-reverse">
+                        <div className={`flex-column flex-md-row ${styles.mainContainer}`}>
+                            <div className=" col-12 col-md-6  d-flex flex-row-reverse">
                                 <ProductCarousel images={productSelected.images} />
                             </div>
                             {/* <img src={productSelected.images[2]} alt="" className={styles.imgContainer} /> */}
-                            <div className=" p-5 d-flex flex-column jus">
+                            <div className=" p-5 d-flex flex-column col-12 col-md-6">
                                 <div>
                                     <h2>{productSelected.title}</h2>
                                     <h3 className=" me-2">${precio}</h3>

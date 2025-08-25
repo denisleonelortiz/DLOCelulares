@@ -25,6 +25,7 @@ export default function ProductCarousel({ images }) {
           '--swiper-navigation-color': 'gray',
           '--swiper-pagination-color': '#000000ff',
           '--swiper-navigation-sides-offset': '0px',
+          paddingBottom: '30px',
         }}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
@@ -42,7 +43,7 @@ export default function ProductCarousel({ images }) {
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         direction="vertical"
-        className="mySwiper bg-danger thumbs-swiper"
+        className="mySwiper thumbs-swiper"
       >
         {images.map(image => <SwiperSlide><img src={image} /></SwiperSlide>)}
       </Swiper>

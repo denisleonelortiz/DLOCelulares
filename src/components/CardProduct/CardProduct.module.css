@@ -66,6 +66,7 @@
     background-color: inherit !important;
     color: inherit !important;
     border-color: transparent !important;
+    pointer-events: none !important;
   }
 }
 

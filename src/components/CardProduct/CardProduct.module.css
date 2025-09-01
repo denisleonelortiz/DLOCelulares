@@ -46,7 +46,7 @@
 .btnRestSum {
     transition: all 0.3s ease;
     margin-right: -1px !important;
-    -webkit-tap-highlight-color: transparent; /* iOS/Android */
+    -webkit-tap-highlight-color: transparent; /* elimina tap highlight en móviles */
 }
 
 .btnRestSum:hover {
@@ -58,7 +58,11 @@
 /* Esto desactiva hover simulado en pantallas táctiles */
 @media (hover: none) {
   .btnRestSum:hover,
-  .button:hover {
+  .btnRestSum:active,
+  .btnRestSum:focus,
+  .button:hover,
+  .button:active,
+  .button:focus {
     background-color: inherit !important;
     color: inherit !important;
     border-color: transparent !important;

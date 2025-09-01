@@ -11,6 +11,7 @@ export default function CardProduct({ product }) {
     const { carrito } = useContext(CartContext)
     const { handlerAddButton, handlerIncrease, handlerDecrease } = useContext(CardProductContext)
     const addBtnRef = useRef(null)
+    const [showAddBtn, setShowAddBtn] = useState(true);
 
     useEffect(() => {
         let newQuantity = carrito.find(item => item.id === product.id)?.quantity || 0
@@ -23,6 +24,13 @@ export default function CardProduct({ product }) {
             addBtnRef.current.blur(); // quita el estado activo del botón al renderizar
         }
     }, [quantity]);
+
+
+    const handleDecrease = () => {
+        handlerDecrease(product);
+        setShowAddBtn(false);
+        setTimeout(() => setShowAddBtn(true), 50); // 50ms de retraso evita el pseudo-hover
+    };
 
 
     return (
@@ -40,7 +48,7 @@ export default function CardProduct({ product }) {
                     <button className={styles.button} onClick={() => handlerAddButton(product)} ref={addBtnRef} >Agregar al carrito</button>
 
                     : <>
-                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerDecrease(product)} ref={addBtnRef}>-</button>
+                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handleDecrease(product)} ref={addBtnRef}>-</button>
                         <span className=" m-auto">{quantity} en tu carrito</span>
                         <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerIncrease(product)}>+</button>
                     </>

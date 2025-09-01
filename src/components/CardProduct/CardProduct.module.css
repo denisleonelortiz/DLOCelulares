@@ -46,6 +46,7 @@
 .btnRestSum {
     transition: all 0.3s ease;
     margin-right: -1px !important;
+    -webkit-tap-highlight-color: transparent; /* iOS/Android */
 }
 
 .btnRestSum:hover {

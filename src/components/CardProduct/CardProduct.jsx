@@ -31,12 +31,22 @@ export default function CardProduct({ product }) {
 
             <div className={styles.btnContainer}>
                 {quantity === 0 ?
-                    <button className={styles.button} onClick={() => handlerAddButton(product)} >Agregar al carrito</button>
+                    <button className={styles.button} onClick={(e) => {
+                        handlerAddButton(product);
+                        e.currentTarget.blur()
+                     }} >Agregar al carrito</button>
 
                     : <>
-                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerDecrease(product)}>-</button>
+                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={(e) => {
+
+                         handlerDecrease(product);
+                         e.currentTarget.blur();
+                        }}>-</button>
                         <span className=" m-auto">{quantity} en tu carrito</span>
-                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerIncrease(product)}>+</button>
+                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={(e) => {
+                             handlerIncrease(product);
+                             e.currentTarget.blur();
+                        }}>+</button>
                     </>
                 }
             </div>

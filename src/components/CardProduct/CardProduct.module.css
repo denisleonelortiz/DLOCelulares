@@ -58,15 +58,10 @@
     }
 }
 
-@media (hover: none) {
-
-    .button:focus,
-    .button:focus-visible,
-    .btnRestSum:focus,
-    .btnRestSum:focus-visible {
-        outline: none !important;
-        box-shadow: none !important;
-    }
+.btnRestSum:active,
+.button:active {
+    box-shadow: none !important;
+    border: 1px solid transparent !important;
 }
 
 .btnContainer {

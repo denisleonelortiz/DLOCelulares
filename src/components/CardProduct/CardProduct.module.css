@@ -59,6 +59,11 @@
     }
 }
 
+.btnRestSum:focus:not(:active) {
+    /* solo aplica cuando está enfocado pero NO activo */
+    background-color: #ffffff;
+    box-shadow: none;
+}
 
 .btnContainer {
     display: flex;

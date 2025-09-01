@@ -1,17 +1,3 @@
-/* .cartContainer{
-    width: 20%;
-    color: black;
-    position: fixed;
-    top: 4rem;
-    right: 6rem;
-    height: calc(100vh - 5rem);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    overflow-y: auto;
-    background-color: white;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-} */
-
 .cartContainer {
   position: fixed;
   top: 0;
@@ -33,20 +19,9 @@
 }
 
 .closeBtn {
-  background-color: black;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
-  border-radius: 8PX;
-  transition: all 0.3s ease;
-}
-
-.closeBtn:hover {
-  background-color: rgb(255, 0, 0);
 }
 
 .titleCarrito {
@@ -56,10 +31,6 @@
   color: rgb(32, 106, 243);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-/* .cartContainer::-webkit-scrollbar {
-    display: none;
-} */
 
 .cartContainer::-webkit-scrollbar {
   width: 16px;
@@ -119,38 +90,21 @@
   width: 50%;
 }
 
-.btn {
-  color: black;
-  background-color: white;
-  border: 3px solid black;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-}
-
-.btn:hover {
-  background-color: rgb(255, 0, 0);
-  color: white;
-  border: 3px solid rgb(255 , 0, 0);
+.customBtn {
   transition: all 0.3s ease;
 }
 
-button:focus {
-  outline: red;
+.customBtn:hover {
+  color: rgb(255, 0, 0) !important;
 }
 
-.trashButton {
-  background-color: white;
-  color: black;
-  margin-inline-start: 0px;
-  padding: 2px;
+.customBtnBgRed{
   transition: all 0.3s ease;
 }
 
-.trashButton:hover {
-  color: rgb(255, 0, 0);
-  border: 1px solid transparent;
+.customBtnBgRed:hover {
+  background-color: rgb(255, 0, 0) !important;
+  border: 1px solid rgb(255, 0, 0) !important;;
 }
 
 .grayBackground {
@@ -163,6 +117,7 @@ button:focus {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .grayBackground.show {

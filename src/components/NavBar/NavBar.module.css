@@ -73,20 +73,14 @@
   color: #49d3fd !important;
 }
 
-.miCarrito2{
+/* .miCarrito2{
+  color: white !important;
   font-size: 1.25rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   text-decoration: none;
   white-space: nowrap;
-}
+} */
 
-.miCarrito2:hover{
-  border-color: transparent;
-}
-.miCarrito2:focus {
-  color: #49d3fd !important;
-  border-color: transparent;
-}
 

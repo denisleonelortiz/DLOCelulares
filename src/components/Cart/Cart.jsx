@@ -18,7 +18,7 @@ export default function Cart() {
 
             {/* panel del carrito */}
             <div className={`${styles.cartContainer} ${active ? styles.open : ""}`}>
-                <button className={styles.closeBtn} onClick={()=>setActive(false)}>X</button>
+                <button className={` btn btn-dark ${styles.closeBtn}`} onClick={()=>setActive(false)}>X</button>
                 <h5 className={styles.titleCarrito}>Resumen de tu compra</h5>
                 {carrito.length ?
                     <>
@@ -34,7 +34,7 @@ export default function Cart() {
                                         <span><strong>Subtotal: ${product.quantity * Math.ceil(product.price)}</strong></span>
                                     </div>
                                     <div>
-                                        <button className={styles.trashButton} onClick={() => handlerTrashButton(product.id)}>
+                                        <button className={` btn ${styles.customBtn} `} onClick={() => handlerTrashButton(product.id)}>
                                             <FaTrash />
                                         </button>
                                     </div>
@@ -42,7 +42,7 @@ export default function Cart() {
                             }
                         </ul>
                         <p><strong>Total: ${totalPrice}</strong></p>
-                        <button onClick={HandlerVaciarCarrito} className={styles.btn}>Vaciar carrito</button>
+                        <button onClick={HandlerVaciarCarrito} className={` btn btn-dark ${styles.customBtnBgRed}`}>Vaciar carrito</button>
                     </>
                     : <p style={{paddingTop:"3rem"}}>No hay productos en el carrito</p>
                 }

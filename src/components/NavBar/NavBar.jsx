@@ -29,12 +29,11 @@ export default function NavBar() {
 
                         {/* boton carrito y hamburguesa para pantallas chicas */}
                         <div>
-                            <button onClick={() => setActive(!active)} className={` bg-black d-lg-none ${styles.miCarrito2}`} type="button">
+                            <button onClick={() => setActive(!active)} className=" btn bg-black text-white me-2 d-lg-none " type="button">
                                 <FaShoppingCart /> {totalProducts}
                             </button>
 
-                            <button className="navbar-toggler border border-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                {/* <span className="navbar-toggler-icon"></span> */}
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <FaBars color="white" />
                             </button>
                         </div>

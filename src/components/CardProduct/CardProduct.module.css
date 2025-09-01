@@ -37,6 +37,12 @@
     border: 1px solid transparent !important;
 }
 
+.button:active,
+.btnRestSum:active {
+  background-color: #000000 !important;
+  color: white !important; /* cambio de color momentáneo */
+}
+
 .btnRestSum {
     transition: all 0.3s ease;
     margin-right: -1px !important;

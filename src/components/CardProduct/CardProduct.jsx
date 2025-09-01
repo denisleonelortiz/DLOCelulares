@@ -31,10 +31,10 @@ export default function CardProduct({ product }) {
 
             <div className={styles.btnContainer}>
                 {quantity === 0 ?
-                    <button className={` btn ${styles.button}`} onClick={() => handlerAddButton(product)} >Agregar al carrito</button>
+                    <button className={` btn btn-dark w-100`} onClick={() => handlerAddButton(product)} autoFocus={false} >Agregar al carrito</button>
 
                     : <>
-                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerDecrease(product)}>-</button>
+                        <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerDecrease(product)} autoFocus={false}>-</button>
                         <span className=" m-auto">{quantity} en tu carrito</span>
                         <button className={`btn px-3 ${styles.btnRestSum}`} onClick={() => handlerIncrease(product)}>+</button>
                     </>

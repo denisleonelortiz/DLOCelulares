@@ -24,7 +24,7 @@
     height: 100%;
 }
 
-.button {
+/* .button {
     color: black;
     background-color: white;
     cursor: pointer;
@@ -35,13 +35,7 @@
     justify-content: center;
     align-items: center;
     border: 1px solid transparent !important;
-}
-
-.button:active,
-.btnRestSum:active {
-  background-color: #000000 !important;
-  color: white !important; /* cambio de color momentáneo */
-}
+} */
 
 .btnRestSum {
     transition: all 0.3s ease;

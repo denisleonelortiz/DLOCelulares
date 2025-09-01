@@ -54,6 +54,16 @@
     border: 1px solid black !important;
 }
 
+/* Esto desactiva hover simulado en pantallas táctiles */
+@media (hover: none) {
+  .btnRestSum:hover,
+  .button:hover {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: transparent !important;
+  }
+}
+
 .btnContainer {
     display: flex;
     justify-content: space-between;

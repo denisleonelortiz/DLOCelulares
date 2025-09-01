@@ -37,37 +37,37 @@
     align-items: center;
 }
 
-.button:hover {
+/* .button:hover {
     background-color: rgb(0, 0, 0);
     color: white;
-}
+} */
 
 
 .btnRestSum {
     transition: all 0.3s ease;
     margin-right: -1px !important;
-    -webkit-tap-highlight-color: transparent; /* elimina tap highlight en móviles */
+    -webkit-tap-highlight-color: transparent;
+    /* elimina tap highlight en móviles */
 }
 
-.btnRestSum:hover {
+/* .btnRestSum:hover {
     background-color: black !important;
     color: white !important;
     border: 1px solid black !important;
-}
+} */
 
-/* Esto desactiva hover simulado en pantallas táctiles */
-@media (hover: none) {
-  .btnRestSum:hover,
-  .btnRestSum:active,
-  .btnRestSum:focus,
-  .button:hover,
-  .button:active,
-  .button:focus {
-    background-color: inherit !important;
-    color: inherit !important;
-    border-color: transparent !important;
-    pointer-events: none !important;
-  }
+/* aplicar hover SOLO en pantallas con mouse */
+@media (hover: hover) and (pointer: fine) {
+    .button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .btnRestSum:hover {
+        background-color: black !important;
+        color: white !important;
+        border: 1px solid black !important;
+    }
 }
 
 .btnContainer {
